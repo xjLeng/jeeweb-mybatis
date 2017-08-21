@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.jeeweb.modules.sys.mapper.UserOnlineMapper" >
-   
+<mapper namespace="cn.ileng.modules.sys.mapper.UserOnlineMapper" >
+
    <sql id="Base_Column_List" >
     uo.id,
     uo.user_id,
@@ -11,17 +11,17 @@
 	uo.user_agent,
 	uo.status,
 	uo.start_timestsamp,
-	uo.last_access_time, 
+	uo.last_access_time,
     uo.online_timeout,
     uo.online_session
   </sql>
-  
+
   <select id="selectUserOnlinePage"  resultType="UserOnline">
-    select 
+    select
     <include refid="Base_Column_List" />
     FROM sys_user_online uo
     <where>
-	   ${ew.sqlSegment} 
+	   ${ew.sqlSegment}
 	</where>
   </select>
 </mapper>

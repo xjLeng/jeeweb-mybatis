@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<display-name>jeeweb</display-name>
 	<!-- 应用路径 -->
@@ -122,7 +122,7 @@
 	<!-- 验证码过滤器需要放到Shiro之后 因为Shiro将包装HttpSession 如果不 可能造成两次的sesison id 不一样 -->
 	<filter>
 		<filter-name>JCaptchaFilter</filter-name>
-		<filter-class>cn.jeeweb.modules.common.jcaptcha.JCaptchaFilter</filter-class>
+		<filter-class>cn.ileng.modules.common.jcaptcha.JCaptchaFilter</filter-class>
 		<async-supported>true</async-supported>
 	</filter>
 	<filter-mapping>
@@ -131,10 +131,10 @@
 	</filter-mapping>
 
 	<!-- Xss安全过滤
-	
+
 	<filter>
 		<filter-name>XssEscape</filter-name>
-		<filter-class>cn.jeeweb.core.filter.xss.XssFilter</filter-class>
+		<filter-clcn.ilengweb.core.filter.xss.XssFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>XssEscape</filter-name>

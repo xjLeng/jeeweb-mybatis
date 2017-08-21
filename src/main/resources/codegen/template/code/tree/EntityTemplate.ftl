@@ -1,6 +1,6 @@
 package ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.entity;
 
-import cn.jeeweb.core.common.entity.TreeEntity;
+import cn.ileng.core.common.entity.TreeEntity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -11,18 +11,18 @@ import ${importType};
 </#list>
 
 
-/**   
+/**
  * @Title: ${functionName}
  * @Description: ${functionDesc}
  * @author ${functionAuthor}
  * @date ${time}
- * @version V1.0   
+ * @version V1.0
  *
  */
 @TableName("${tableName}")
 @SuppressWarnings("serial")
 public class ${entityName?cap_first} extends TreeEntity<${entityName?cap_first}> {
-	
+
 	<#list attributeInfos as attributeInfo>
     /**${attributeInfo.remarks}*/
     <#if attributeInfo.name!='id'&&attributeInfo.name!='name'&& attributeInfo.name!='parentId'&& attributeInfo.name!='parentIds'>
@@ -30,7 +30,7 @@ public class ${entityName?cap_first} extends TreeEntity<${entityName?cap_first}>
 	private <#if attributeInfo.type=='this'>${entityName?cap_first}<#else>${attributeInfo.type}</#if> ${attributeInfo.name};
 	</#if>
 	</#list>
-	
+
 	<#list attributeInfos as attributeInfo>
 	 <#if attributeInfo.name!='id'&&attributeInfo.name!='name'&& attributeInfo.name!='parentId'&& attributeInfo.name!='parentIds'>
 	/**

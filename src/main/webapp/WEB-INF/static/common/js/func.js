@@ -2,7 +2,7 @@
  * Copyright &copy; 2016-2020 <a href="http://www.jeeweb.cn/">JeeWeb</a> All rights reserved.
  * 
  * 一些公共的方法
- * @author 王存见
+ * @author ileng
  * @version 2017-06-03
  */
 /*{

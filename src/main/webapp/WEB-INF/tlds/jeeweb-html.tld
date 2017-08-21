@@ -11,7 +11,7 @@
 	<tag>
 		<description>html组件导入</description>
 		<name>css</name>
-		<tag-class>cn.jeeweb.core.tags.html.CssComponentTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.CssComponentTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>组建名称</description>
@@ -23,7 +23,7 @@
 	<tag>
 		<description>Js组件导入</description>
 		<name>js</name>
-		<tag-class>cn.jeeweb.core.tags.html.JsComponentTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.JsComponentTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>组建名称</description>
@@ -35,7 +35,7 @@
 	<tag>
 		<description>html组件导入</description>
 		<name>component</name>
-		<tag-class>cn.jeeweb.core.tags.html.ComponentTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.ComponentTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>组建名称</description>
@@ -47,7 +47,7 @@
 	<tag>
 		<description>代码片段导入</description>
 		<name>fragment</name>
-		<tag-class>cn.jeeweb.core.tags.html.FragmentComponentTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.FragmentComponentTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>组建名称</description>
@@ -59,13 +59,13 @@
 	<tag>
 		<description>代码显示组建</description>
 		<name>display</name>
-		<tag-class>cn.jeeweb.core.tags.html.DisplayTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.DisplayTag</tag-class>
 		<bodycontent>tagdependent</bodycontent>
 	</tag>
 	<tag>
 		<description>代码显示组建</description>
 		<name>codedisplay</name>
-		<tag-class>cn.jeeweb.core.tags.html.CodeDisplayTag</tag-class>
+		<tag-class>cn.ileng.core.tags.html.CodeDisplayTag</tag-class>
 		<bodycontent>tagdependent</bodycontent>
 		<attribute>
 			<description>代码类型</description>

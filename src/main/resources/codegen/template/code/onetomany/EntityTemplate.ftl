@@ -1,6 +1,6 @@
 package ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.entity;
 
-import cn.jeeweb.core.common.entity.AbstractEntity;
+import cn.ileng.core.common.entity.AbstractEntity;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
@@ -9,12 +9,12 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import ${importType};
 </#list>
 
-/**   
+/**
  * @Title: ${functionName}
  * @Description: ${functionDesc}
  * @author ${functionAuthor}
  * @date ${time}
- * @version V1.0   
+ * @version V1.0
  *
  */
 @TableName("${tableName}")
@@ -30,7 +30,7 @@ public class ${entityName?cap_first} extends AbstractEntity<String> {
     </#if>
 	private <#if attributeInfo.type=='this'>${entityName?cap_first}<#else>${attributeInfo.type}</#if> ${attributeInfo.name};
 	</#list>
-	
+
 	<#list attributeInfos as attributeInfo>
 	/**
 	 * 获取  ${attributeInfo.name}
@@ -48,5 +48,5 @@ public class ${entityName?cap_first} extends AbstractEntity<String> {
 		this.${attributeInfo.name} = ${attributeInfo.name};
 	}
 	</#list>
-	
+
 }

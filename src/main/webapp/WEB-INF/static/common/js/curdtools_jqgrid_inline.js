@@ -2,7 +2,7 @@
  * Copyright &copy; 2016-2020 <a href="http://www.jeeweb.cn/">JeeWeb</a> All rights reserved.
  * 
  * 行内编辑
- * @author 王存见
+ * @author ileng
  * @version 2017-06-03
  */
 //生成随机数

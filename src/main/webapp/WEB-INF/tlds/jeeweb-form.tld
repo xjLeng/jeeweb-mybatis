@@ -11,7 +11,7 @@
 	<tag>
 		<description>Renders an HTML 'form' tag and exposes a binding path to inner tags for binding.</description>
 		<name>form</name>
-		<tag-class>cn.jeeweb.core.tags.form.FormTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.FormTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>HTML Standard Attribute</description>
@@ -201,7 +201,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'text' using the bound value.</description>
 		<name>input</name>
-		<tag-class>cn.jeeweb.core.tags.form.InputTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.InputTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -419,7 +419,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'password' using the bound value.</description>
 		<name>password</name>
-		<tag-class>cn.jeeweb.core.tags.form.PasswordInputTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.PasswordInputTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -619,7 +619,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'hidden' using the bound value.</description>
 		<name>hidden</name>
-		<tag-class>cn.jeeweb.core.tags.form.HiddenInputTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.HiddenInputTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -771,7 +771,7 @@
 	<tag>
 		<description>Renders an HTML 'select' element. Supports databinding to the selected option.</description>
 		<name>select</name>
-		<tag-class>cn.jeeweb.core.tags.form.SelectTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.SelectTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -983,7 +983,7 @@
 	<tag>
 		<description>Renders a single HTML 'option'. Sets 'selected' as appropriate based on bound value.</description>
 		<name>option</name>
-		<tag-class>cn.jeeweb.core.tags.form.OptionTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.OptionTag</tag-class>
 		<body-content>JSP</body-content>
 		<variable>
 			<description>The actual value bound to the 'value' attribute</description>
@@ -1134,7 +1134,7 @@
 	<tag>
 		<description>Renders a list of HTML 'option' tags. Sets 'selected' as appropriate based on bound value.</description>
 		<name>options</name>
-		<tag-class>cn.jeeweb.core.tags.form.OptionsTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.OptionsTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>HTML Standard Attribute</description>
@@ -1280,7 +1280,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'radio'.</description>
 		<name>radiobutton</name>
-		<tag-class>cn.jeeweb.core.tags.form.RadioButtonTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.RadioButtonTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -1450,7 +1450,7 @@
 	<tag>
 		<description>Renders multiple HTML 'input' tags with type 'radio'.</description>
 		<name>radiobuttons</name>
-		<tag-class>cn.jeeweb.core.tags.form.RadioButtonsTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.RadioButtonsTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -1662,7 +1662,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'checkbox'.</description>
 		<name>checkbox</name>
-		<tag-class>cn.jeeweb.core.tags.form.CheckboxTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.CheckboxTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -1832,7 +1832,7 @@
 	<tag>
 		<description>Renders multiple HTML 'input' tags with type 'checkbox'.</description>
 		<name>checkboxes</name>
-		<tag-class>cn.jeeweb.core.tags.form.CheckboxesTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.CheckboxesTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -2044,7 +2044,7 @@
 	<tag>
 		<description>Renders an HTML 'textarea'.</description>
 		<name>textarea</name>
-		<tag-class>cn.jeeweb.core.tags.form.TextareaTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.TextareaTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -2244,7 +2244,7 @@
 	<tag>
 		<description>Renders field errors in an HTML 'span' tag.</description>
 		<name>errors</name>
-		<tag-class>cn.jeeweb.core.tags.form.ErrorsTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.ErrorsTag</tag-class>
 		<body-content>JSP</body-content>
 		<variable>
 			<name-given>messages</name-given>
@@ -2382,7 +2382,7 @@
 	<tag>
 		<description>Renders a form field label in an HTML 'label' tag.</description>
 		<name>label</name>
-		<tag-class>cn.jeeweb.core.tags.form.LabelTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.LabelTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>Path to property for data binding</description>
@@ -2516,7 +2516,7 @@
 	<tag>
 		<description>Renders an HTML 'button' tag.</description>
 		<name>button</name>
-		<tag-class>cn.jeeweb.core.tags.form.ButtonTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.ButtonTag</tag-class>
 		<body-content>JSP</body-content>
 		<attribute>
 			<description>HTML Standard Attribute</description>
@@ -2553,7 +2553,7 @@
 	<tag>
 		<description>Renders an HTML 'editor'.</description>
 		<name>editor</name>
-		<tag-class>cn.jeeweb.core.tags.form.EditorTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.EditorTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>编辑器的类型</description>
@@ -2796,7 +2796,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'text' using the bound value.</description>
 		<name>fileinput</name>
-		<tag-class>cn.jeeweb.core.tags.form.FileInputTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.FileInputTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>是否是多文件上传</description>
@@ -3086,7 +3086,7 @@
 	<tag>
 		<description>图标选择框</description>
 		<name>iconselect</name>
-		<tag-class>cn.jeeweb.core.tags.form.IconSelectTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.IconSelectTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>宽度</description>
@@ -3262,7 +3262,7 @@
 	<tag>
 		<description>树形选择框</description>
 		<name>treeselect</name>
-		<tag-class>cn.jeeweb.core.tags.form.TreeSelectTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.TreeSelectTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>显示域的ID</description>
@@ -3480,7 +3480,7 @@
 	<tag>
 		<description>GRID选择框</description>
 		<name>gridselect</name>
-		<tag-class>cn.jeeweb.core.tags.form.GridSelectTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.GridSelectTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>显示域的ID</description>
@@ -3716,7 +3716,7 @@
 	<tag>
 		<description>Renders an HTML 'input' tag with type 'hidden' using the bound value.</description>
 		<name>combox</name>
-		<tag-class>cn.jeeweb.core.tags.form.ComboxTag</tag-class>
+		<tag-class>cn.ileng.core.tags.form.ComboxTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<description>字段KEY</description>

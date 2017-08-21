@@ -13,7 +13,7 @@
     </bean>
 
     <!-- 缓存管理器 -->
-	<bean id="shiroCacheManager"  class=" cn.jeeweb.modules.sys.security.shiro.cache.spring.SpringCacheManagerWrapper">
+	<bean id="shiroCacheManager"  class=" cn.ileng.modules.sys.security.shiro.cache.spring.SpringCacheManagerWrapper">
         <property name="cacheManager" ref="springCacheManager"/>
     </bean>
 </beans>

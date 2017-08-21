@@ -1,7 +1,7 @@
 package ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.service.impl;
 
-import cn.jeeweb.core.common.service.impl.CommonServiceImpl;
-import cn.jeeweb.core.query.wrapper.EntityWrapper;
+import cn.ileng.core.common.service.impl.CommonServiceImpl;
+import cn.ileng.core.query.wrapper.EntityWrapper;
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.mapper.${entityName?cap_first}Mapper;
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.entity.${entityName?cap_first};
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.service.I${entityName?cap_first}Service;
@@ -12,19 +12,19 @@ import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import cn.jeeweb.core.utils.ServletUtils;
-import cn.jeeweb.core.utils.StringUtils;
+import cn.ileng.core.utils.ServletUtils;
+import cn.ileng.core.utils.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringEscapeUtils;
 
-/**   
+/**
  * @Title: ${functionName}
  * @Description: ${functionDesc}
  * @author ${functionAuthor}
  * @date ${time}
- * @version V1.0   
+ * @version V1.0
  *
  */
 @Transactional
@@ -34,7 +34,7 @@ public class ${entityName?cap_first}ServiceImpl  extends CommonServiceImpl<${ent
 	@Autowired
 	private I${schedule.className?cap_first}Service ${schedule.className?uncap_first}Service;
 	</#list>
-	
+
 	@Override
 	public boolean insert(${entityName?cap_first} ${entityName?uncap_first}) {
 		// 保存主表
@@ -52,7 +52,7 @@ public class ${entityName?cap_first}ServiceImpl  extends CommonServiceImpl<${ent
 		</#list>
 		return true;
 	}
-	
+
 	@Override
 	public boolean insertOrUpdate(${entityName?cap_first} ${entityName?uncap_first}) {
 		try {
@@ -97,7 +97,7 @@ public class ${entityName?cap_first}ServiceImpl  extends CommonServiceImpl<${ent
 		}
 		return true;
 	}
-	
-	
-	
+
+
+
 }

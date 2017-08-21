@@ -12,7 +12,7 @@
 		<!-- Grid主标签 -->
 		<name>grid</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.grid.DataGridTag</tag-class>
+		<tag-class>cn.ileng.core.tags.grid.DataGridTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>JSP</body-content>
 		<attribute>
@@ -178,7 +178,7 @@
 		<!-- 标签名字 -->
 		<name>column</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.grid.DataGridColumnTag</tag-class>
+		<tag-class>cn.ileng.core.tags.grid.DataGridColumnTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>empty</body-content>
 		<attribute>
@@ -374,7 +374,7 @@
 		<!--查询标签 -->
 		<name>query</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.grid.DataGridQueryTag</tag-class>
+		<tag-class>cn.ileng.core.tags.grid.DataGridQueryTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>empty</body-content>
 		<attribute>
@@ -415,7 +415,7 @@
 		<!-- 标签名字 -->
 		<name>toolbar</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.grid.DataGridToolbarTag</tag-class>
+		<tag-class>cn.ileng.core.tags.grid.DataGridToolbarTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>empty</body-content>
 		<attribute>
@@ -492,7 +492,7 @@
 		<!-- 标签名字 -->
 		<name>button</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.grid.DataGridButtonTag</tag-class>
+		<tag-class>cn.ileng.core.tags.grid.DataGridButtonTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>empty</body-content>
 		<attribute>

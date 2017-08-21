@@ -3,22 +3,22 @@
 	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans  
-      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
-      http://www.springframework.org/schema/context  
-      http://www.springframework.org/schema/context/spring-context.xsd  
-      http://www.springframework.org/schema/aop 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd
+      http://www.springframework.org/schema/aop
 	  http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
-      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc
       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 	<!-- 加载配置属性文件 -->
 	<context:property-placeholder
 		ignore-unresolvable="true"
-		location="classpath:jeeweb.properties,classpath:upload.properties" />
+		location="classpath:ileng.properties,classpath:upload.properties" />
 	<!-- 注解扫描的包 -->
 	<!-- 开启controller注解支持 -->
-	<context:component-scan base-package="cn.jeeweb.modules.**.controller"
+	<context:component-scan base-package="cn.ileng.modules.**.controller"
 		use-default-filters="false">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -26,7 +26,7 @@
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
 	<!-- 扫描注解AOP包 -->
-	<context:component-scan base-package="cn.jeeweb.core.security.shiro.aspect" />
+	<context:component-scan base-package="cn.ileng.core.security.shiro.aspect" />
 
 	<!-- 配置使Spring采用CGLIB代理 -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
@@ -43,10 +43,10 @@
 	<!-- <mvc:default-servlet-handler/> -->
 
 
-	<bean class="cn.jeeweb.core.utils.SpringContextHolder" />
+	<bean class="cn.ileng.core.utils.SpringContextHolder" />
 	<!-- 开启注解方案1 -->
 	<!-- 注解方法处理 -->
-	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" 
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"
 		/> -->
 	<!-- 注解类映射处理 -->
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean> -->
@@ -54,11 +54,11 @@
 	<!-- 开启注解方案2 -->
 	<mvc:annotation-driven>
 		<mvc:argument-resolvers>
-			<bean class="cn.jeeweb.core.query.resolver.QueryMethodArgumentResolver" />
-			<bean class="cn.jeeweb.core.query.resolver.PageableMethodArgumentResolver" />
-			<bean class="cn.jeeweb.core.query.resolver.FormModelMethodArgumentResolver" />
-			<bean class="cn.jeeweb.core.query.resolver.RequestJsonParamMethodArgumentResolver" />
-			<bean class="cn.jeeweb.core.query.resolver.PropertyPreFilterMethodArgumentResolver" />
+			<bean class="cn.ileng.core.query.resolver.QueryMethodArgumentResolver" />
+			<bean class="cn.ileng.core.query.resolver.PageableMethodArgumentResolver" />
+			<bean class="cn.ileng.core.query.resolver.FormModelMethodArgumentResolver" />
+			<bean class="cn.ileng.core.query.resolver.RequestJsonParamMethodArgumentResolver" />
+			<bean class="cn.ileng.core.query.resolver.PropertyPreFilterMethodArgumentResolver" />
 		</mvc:argument-resolvers>
 
 
@@ -92,7 +92,7 @@
 				</property>
 				<property name="prettyPrint" value="false" />
 				<property name="ObjectMapper">
-					<bean class="cn.jeeweb.core.mapper.JsonMapper">
+					<bean class="cn.ileng.core.mapper.JsonMapper">
 						<property name="dateFormat">
 							<bean class="java.text.SimpleDateFormat">
 								<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />
@@ -122,7 +122,7 @@
 	<!--设置查询字符串转换器的conversion service -->
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="staticMethod"
-			value="cn.jeeweb.core.query.utils.QueryableConvertUtils.setConversionService" />
+			value="cn.ileng.core.query.utils.QueryableConvertUtils.setConversionService" />
 		<property name="arguments" ref="conversionService" />
 	</bean>
 
@@ -142,11 +142,11 @@
 	    <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 -->
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
 		<!-- 日志拦截器 -->
-		<bean class="cn.jeeweb.modules.common.interceptor.LogInterceptor" >
+		<bean class="cn.ileng.modules.common.interceptor.LogInterceptor" >
 		      <property name="openAccessLog" value="${openAccessLog}" />
 		</bean>
 		<!--配置文件拦截器 -->
-		<bean class="cn.jeeweb.core.interceptor.ReloadConfigInterceptor" >
+		<bean class="cn.ileng.core.interceptor.ReloadConfigInterceptor" >
 		      <property name="developMode" value="${developMode}" />
 		      <property name="reloadConfigInterval" value="${reload.config.interval}" />
 		</bean>
@@ -156,7 +156,7 @@
 			<mvc:exclude-mapping path="/static/**" />
 			<!-- 需排除拦截的地址 -->
 			<mvc:exclude-mapping path="/upload/**" />
-			<bean class="cn.jeeweb.core.interceptor.EncodingInterceptor" />
+			<bean class="cn.ileng.core.interceptor.EncodingInterceptor" />
 		</mvc:interceptor>
 		<!-- 安全验证拦截器 -->
 		<mvc:interceptor>
@@ -165,7 +165,7 @@
 			<mvc:exclude-mapping path="/static/**" />
 			<!-- 需排除拦截的地址 -->
 			<mvc:exclude-mapping path="/upload/**" />
-			<bean class="cn.jeeweb.core.security.shiro.interceptor.PermissionInterceptorAdapter" />
+			<bean class="cn.ileng.core.security.shiro.interceptor.PermissionInterceptorAdapter" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
@@ -175,7 +175,7 @@
 	</bean>
 
 
-	<bean class="cn.jeeweb.core.exception.DefaultExceptionHandler" />
+	<bean class="cn.ileng.core.exception.DefaultExceptionHandler" />
 
 	<!-- 国际化 -->
 	<bean id="messageSource"
@@ -199,7 +199,7 @@
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		p:defaultEncoding="UTF-8" p:maxUploadSize="5400000" p:uploadTempDir="${upload.base.dir}/temp" />
-	
+
 	<!-- 以下 validator  http://blog.csdn.net/xiaojiesu/article/details/50555714 在使用 mvc:annotation-driven 会 自动注册-->
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
         <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
@@ -211,18 +211,18 @@
 
 
 	<!-- JEEWEB完全启动回调 -->
-	<bean class="cn.jeeweb.modules.common.listener.WebStartInitListener" />
+	<bean class="cn.ileng.modules.common.listener.WebStartInitListener" />
 
 	<!-- 计划任务后台管理 -->
 	<bean id="schedulerFactoryBean"
 		class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
 	<!-- 计划任务启动监听器 -->
-	<bean class="cn.jeeweb.modules.task.listener.ScheduleJobInitListener" />
+	<bean class="cn.ileng.modules.task.listener.ScheduleJobInitListener" />
 
 
 	<!-- HTML 组建加载器 -->
 	<bean id="defaultHtmlComponentBuilder"
-		class="cn.jeeweb.core.tags.html.builder.DefaultHtmlComponentBuilder">
+		class="cn.ileng.core.tags.html.builder.DefaultHtmlComponentBuilder">
 		<property name="fileNames">
 			<!--这里我们指定要加载某个文件夹下所有以-dynamic.xml结尾的文件 -->
 			<list>
@@ -231,10 +231,10 @@
 		</property>
 	</bean>
 	<!-- html组建管理器加载器 -->
-	<bean class="cn.jeeweb.core.tags.html.manager.HtmlComponentManager">
+	<bean class="cn.ileng.core.tags.html.manager.HtmlComponentManager">
 		<property name="dynamicStatementBuilder" ref="defaultHtmlComponentBuilder" />
 	</bean>
-	<bean class="cn.jeeweb.core.tags.html.listener.HtmlComponentInitListener" />
+	<bean class="cn.ileng.core.tags.html.listener.HtmlComponentInitListener" />
 
 
 

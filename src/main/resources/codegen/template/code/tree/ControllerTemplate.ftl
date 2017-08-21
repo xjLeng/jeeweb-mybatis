@@ -3,16 +3,16 @@ package ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}<
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import cn.jeeweb.core.common.controller.BaseTreeController;
-import cn.jeeweb.core.security.shiro.authz.annotation.RequiresPathPermission;
+import cn.ileng.core.common.controller.BaseTreeController;
+import cn.ileng.core.security.shiro.authz.annotation.RequiresPathPermission;
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.entity.${entityName?cap_first};
 
-/**   
+/**
  * @Title: ${functionName}
  * @Description: ${functionDesc}
  * @author ${functionAuthor}
  * @date ${time}
- * @version V1.0   
+ * @version V1.0
  *
  */
 @Controller

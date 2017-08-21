@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import cn.jeeweb.core.common.controller.BaseCRUDController;
-import cn.jeeweb.core.security.shiro.authz.annotation.RequiresPathPermission;
-import cn.jeeweb.core.query.wrapper.EntityWrapper;
+import cn.ileng.core.common.controller.BaseCRUDController;
+import cn.ileng.core.security.shiro.authz.annotation.RequiresPathPermission;
+import cn.ileng.core.query.wrapper.EntityWrapper;
 import java.util.List;
 
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.entity.${entityName?cap_first};
@@ -19,12 +19,12 @@ import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</
 import ${packageName}<#if moduleName?exists><#if moduleName!=''>.${moduleName}</#if></#if>.service.I${schedule.className?cap_first}Service;
 </#list>
 
-/**   
+/**
  * @Title: ${functionName}
  * @Description: ${functionDesc}
  * @author ${functionAuthor}
  * @date ${time}
- * @version V1.0   
+ * @version V1.0
  *
  */
 @Controller
@@ -35,7 +35,7 @@ public class ${entityName?cap_first}Controller extends BaseCRUDController<${enti
 	@Autowired
 	private I${schedule.className?cap_first}Service ${schedule.className?uncap_first}Service;
 	</#list>
-	
+
 	@Override
 	public void preEdit(${entityName?cap_first} ${entityName?uncap_first}, Model model, HttpServletRequest request, HttpServletResponse response) {
 	    <#list schedules as schedule>

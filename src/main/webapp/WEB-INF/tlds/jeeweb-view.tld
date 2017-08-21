@@ -11,7 +11,7 @@
 		<!-- 树主标签 -->
 		<name>treeview</name>
 		<!-- 处理类 -->
-		<tag-class>cn.jeeweb.core.tags.view.TreeviewTag</tag-class>
+		<tag-class>cn.ileng.core.tags.view.TreeviewTag</tag-class>
 		<!-- 标签的内容体 -->
 		<body-content>JSP</body-content>
 		<attribute>
@@ -44,9 +44,9 @@
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
-		 
+
 		<!-- 指定支持动态属性 -->
 		<dynamic-attributes>true</dynamic-attributes>
 	</tag>
-	 
+
 </taglib>
