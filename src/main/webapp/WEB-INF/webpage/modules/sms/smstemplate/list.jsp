@@ -11,11 +11,17 @@
 	<grid:column label="sys.common.key" hidden="true"   name="id" width="100"/>
 	<grid:column label="sys.common.opt"  name="opt" formatter="button" width="100"/>
 	<grid:button groupname="opt" function="delete" />
-    <grid:column label="模版名称"  name="name"  query="true"  queryModel="input"  condition="like" />
-    <grid:column label="模版编码"  name="code"  query="true"  queryModel="input"  condition="like" />
-    <grid:column label="业务类型"  name="businessType"  query="true"  queryModel="select"  condition="eq"  dict="businesstype"/>
     <grid:column label="模版ID"  name="templateId" />
+    <grid:column label="模版编码"  name="code" />
+    <grid:column label="模版名称"  name="name" />
+    <grid:column label="业务类型"  name="businessType"  dict="businesstype"/>
     <grid:column label="模版内容"  name="templateContent" />
+    <grid:column label="备注信息"  name="remarks" />
+    <grid:column label="创建者"  name="createBy" />
+    <grid:column label="创建时间"  name="createDate" />
+    <grid:column label="更新者"  name="updateBy" />
+    <grid:column label="更新时间"  name="updateDate" />
+    <grid:column label="删除标记（0：正常；1：删除）"  name="delFlag" />
 	<grid:toolbar function="create"/>
 	<grid:toolbar function="update"/>
 	<grid:toolbar function="delete"/>

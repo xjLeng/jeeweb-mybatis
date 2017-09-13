@@ -1,11 +1,5 @@
 package cn.ileng.modules.sms.dao;
 
-import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-
 import cn.ileng.core.disruptor.sms.SmsDao;
 import cn.ileng.core.disruptor.sms.SmsData;
 import cn.ileng.core.utils.StringUtils;
@@ -14,6 +8,10 @@ import cn.ileng.modules.sms.entity.SmsSendLog;
 import cn.ileng.modules.sms.entity.SmsTemplate;
 import cn.ileng.modules.sms.service.ISmsSendLogService;
 import cn.ileng.modules.sms.service.ISmsTemplateService;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Date;
 
 /**
  *
@@ -46,7 +44,7 @@ public class SmsDaoIml implements SmsDao {
 		String templateId = smsData.getSmsTemplate().getTemplateId();
 		try {
 			SmsTemplate smsTemplateEntity = smsTemplateService
-					.selectOne(new EntityWrapper<SmsTemplate>().eq("templateId", templateId));
+					.selectOne(new EntityWrapper<SmsTemplate>().eq("template_id", templateId));
 			if (smsTemplateEntity != null) {
 				smsSendLog.setBusinessType(smsTemplateEntity.getBusinessType());
 			} else {

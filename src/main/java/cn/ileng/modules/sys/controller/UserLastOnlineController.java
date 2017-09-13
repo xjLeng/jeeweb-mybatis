@@ -8,12 +8,11 @@ import cn.ileng.core.security.shiro.authz.annotation.RequiresPathPermission;
 import cn.ileng.modules.sys.entity.UserLastOnline;
 
 /**
+ * @author ileng
+ * @version V1.0
  * @Title: 最后在线情况
  * @Description: 最后在线情况
- * @author ileng
  * @date 2017-05-15 08:18:21
- * @version V1.0
- *
  */
 @Controller
 @RequestMapping("${admin.url.prefix}/sys/lastOnline")
